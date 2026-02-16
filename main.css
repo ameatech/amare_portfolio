@@ -380,6 +380,9 @@ form .btn2:hover {
 	color:blue;
 	font-size:18px;
 }
+p{
+	text-align:none;
+}
 .copyright {
 	position: fixed;
 	bottom: 0;
@@ -479,3 +482,4 @@ nav .fas {
 
 
 }
+
