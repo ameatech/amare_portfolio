@@ -1,0 +1,221 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio</title>
+	 <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="main.css">
+	
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+			<div id="nav-container">
+            <nav>
+                <!-- <image src="images/back.png"  class="logo"></image> -->
+				<h1 style="font-style:italic; padding:10px;">Amea Tech</h1>
+                <ul id="sidemenu">
+                    <li>
+                        <a href="#header">Home</a>
+                    </li>
+                    <li>
+                        <a href="#about">About</a>
+                    </li>
+                    <li>
+                        <a href="#services">Services</a>
+                    </li>
+                    <li>
+                        <a href="#portfolio">Portfolio</a>
+                    </li>
+                    <li>
+                        <a style="margin-right:15px;" href="#contact">Contact</a>
+                    </li>
+					<i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+				<i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+			</div>
+            <div style="width: 62%;" class="heade_text hi">
+                <p>IT profesional</p>
+                <h1>Hi, I am <span class="name">Amare</span> <br>from <span class="ethiopia">Ethiopia</span></h1>
+            </div>
+        </div>
+    </div>
+
+    <!-----about------>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/user.png" alt="user image">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+				
+					<div class="tab-titles">
+					<p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+					<p class="tab-links" onclick="opentab('exprience')">Exprience</p>
+					
+					
+					</div>
+					<div class="tab-contents active-tab" id="skills">
+					<ul>
+					 <li>
+							<span>Full Stack Developer</span><br>
+							Experienced in building complete web applications, handling both front-end interfaces and back-end systems with secure database integration.
+						</li>
+						<li>
+							<span>Front-End Developer</span><br>
+							Skilled in creating responsive, interactive, and user-friendly website interfaces using modern web technologies.
+						</li>
+						<li>
+							<span>Back-End Developer</span><br>
+							Proficient in developing robust server-side logic and designing secure, efficient database structures.
+						</li>
+						<li>
+							<span>Photo Editor</span><br>
+							Specialized in background removal, image enhancement, color correction, and adding creative effects to produce high-quality visuals.
+						</li>
+					</ul>
+					</div>
+					
+					<div class="tab-contents" id="exprience">
+					<ul>
+					 <li>
+						<span>Teaching & Mentorship</span><br>
+						I have delivered practical, IT-focused courses and mentored students in web development, programming, 
+						and digital skills. I focus on hands-on learning, real-world projects, and helping learners build 
+						job-ready competencies.
+					</li>
+					</ul>
+					</div>
+					
+					
+					
+                </div>
+            </div>
+        </div>
+    </div>
+	
+	
+	<!-- ----------- services------------------- -->
+	<div id="services">
+		<div class="container">
+			<h1 class="sub-title">My Services </h1>
+			<div class="srvices-list">
+				<div>
+					<h2>Full Stack</h2>
+					<p>
+						As a passionate full stack developer, I build complete and responsive web applications
+						from front-end to back-end. I work with modern technologies to create efficient, scalable,
+						and user-friendly solutions.I am eager to contribute my skills in developing secure databases,
+						dynamic interfaces, and seamless user experiences.
+					</p>
+				</div>
+				<div>
+					<h2>Web Design</h2>
+					<p>
+						As a creative web designer, I focus on designing clean, modern, and user-friendly websites. 
+						I have strong skills in layout design, color selection, and responsive design to ensure 
+						websites look great on all devices. I am committed to delivering visually appealing and 
+						engaging digital experiences.
+					</p>
+				</div>
+				<div>
+					<h2>photo editor</h2>
+					<p>
+						As a skilled photo editor, I specialize in enhancing images through professional editing techniques. 
+						I am experienced in retouching, color correction, background removal, and creative effects.
+						I strive to produce high-quality visuals that meet client needs and stand out in today’s competitive market.
+					</p>
+				</div>
+			
+			</div>
+		</div>
+	</div>
+	
+	<!-- ----- portfolio / my work ------------- -->
+	<div id="portfolio">
+		<div class="container">
+			<h1 class="sub-title">My Work </h1>
+			<div class = "work-list">
+				<div class="work">
+					<img src="images/slm.jpg" alt="">
+					<div class="layer">
+						<h3>website</h3>
+						<p>student lab result management system</p>
+						<a href="https://ameatech.great-site.net/login.php">click it to see</a>
+					</div>
+				</div>
+				
+			</div>
+			<a class="btn" href="#"> see more</a>
+		</div>
+	
+	</div>
+	
+	<!-- --------------------- contact ------------ -->
+	<div id="contact">
+		<div class="container">
+			<div class="row">
+				<div class="contact-left">
+					<h1 class="sub-title"> Contact Me</h1>
+					<p style="margin-bottom:17px">teachlearn221@gmail.com</p>
+			
+					<div class="social-icons">
+					<a href="#"><i class="fa-brands fa-facebook"></i></a>
+					<a href="https://www.youtube.com/@ameatech"><i class="fa-brands fa-youtube"></i></a>
+					<a href="#"><i class="fa-brands fa-telegram"></i></a>
+					</div>
+				</div>
+				
+				<div class="contact-right">
+					<form>
+						<input type="text" name="name" placeholder="Your Name" required>
+						<input type="email" name="email" placeholder="Your email" required>
+						<textarea rows="10" name="message" placeholder="your message"></textarea>
+						<button class="btn2" type="submit">submit</button>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="copyright">
+			<p>© <span id="year"></span> Amea Tech. All Rights Reserved.</p>
+		</div>
+	</div>
+	
+    <script>
+	var tablinks=document.getElementsByClassName("tab-links");
+	var tabcontents=document.getElementsByClassName("tab-contents");
+	function opentab(tabname){
+	
+	for(tablink of tablinks){
+	tablink.classList.remove("active-link");
+	}
+	
+	for(tabcontent of tabcontents){
+	tabcontent.classList.remove("active-tab");
+	}
+	event.currentTarget.classList.add("active-link");
+	document.getElementById(tabname).classList.add("active-tab");
+	}
+
+	</script>
+	<script>
+		// --------- for menu----------
+		var sidemenu=document.getElementById("sidemenu");
+		
+		function openmenu(){
+			sidemenu.style.right="0";
+		}
+		function closemenu(){
+			sidemenu.style.right="-150px";
+		}
+	</script>
+	<script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
