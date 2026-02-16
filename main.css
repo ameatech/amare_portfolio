@@ -374,9 +374,7 @@ form .btn2:hover {
 	color: white;
 	outline: none;
 }
-p{
-	text-align:justify;
-}
+
 .fa-brands{
 	background:white;
 	color:blue;
@@ -478,5 +476,6 @@ nav .fas {
 	nav ul li{
 		margin: 10px;
 	}
+
 
 }
