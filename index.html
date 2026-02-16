@@ -175,9 +175,11 @@
 					<form id="submit-to-google-sheet">
 						<input type="text" name="name" placeholder="Your Name" required>
 						<input type="email" name="email" placeholder="Your email" required>
-						<textarea rows="10" name="message" placeholder="your message"></textarea>
+						<input type="number" name="phone_number" placeholder="phone number" required>
+						<textarea rows="4" name="message" placeholder="your message"></textarea>
 						<button class="btn2" type="submit">submit</button>
 					</form>
+					<span id="msg"></span>
 				</div>
 			</div>
 		</div>
@@ -218,31 +220,24 @@
     document.getElementById("year").textContent = new Date().getFullYear();
 </script>
 
-	
- <script>
-      const scriptURL =                       
-     "https://script.google.com/macros/s/AKfycbzzHOWfQ4ArJqq0eE7l8Kya9lqYqyw_jCYazop5b1mLdNGPZRxAITRl3GQQ9EJOLg8h/exec";
-      const form = document.forms["submit-to-google-sheet"];
-      form.addEventListener("submit", (e) => {
-        e.preventDefault();
-        var formData = new FormData(form);
-       
+	<script>
+	const scriptURL = "https://script.google.com/macros/s/AKfycbzzHOWfQ4ArJqq0eE7l8Kya9lqYqyw_jCYazop5b1mLdNGPZRxAITRl3GQQ9EJOLg8h/exec";
+	const form = document.forms['submit-to-google-sheet']
+	const msg= document.getElementById("msg");
 
-        fetch(scriptURL, { method: "POST", body: formData })
-          .then((response) => {
-            swal("Done", "Submitted Successfully.", "success");
-          })
-          .catch((error) => {
-            swal("Error", "Something went wrong. please try again!", "error");
-          });
-      });
-    </script>
-
-	
+	form.addEventListener('submit', e => {
+		e.preventDefault()
+		fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+			.then(response => response.json())
+			.then(response => {
+				msg.innerHTML="message sent successfully";
+				setTimeout(function(){
+				msg.innerHTML="";
+				},10000)
+				form.reset();
+			})
+			.catch(error => console.error('Error!', error.message))
+	})
+</script>
 </body>
-
 </html>
-
-
-
-

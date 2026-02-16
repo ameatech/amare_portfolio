@@ -374,14 +374,13 @@ form .btn2:hover {
 	color: white;
 	outline: none;
 }
-
+p{
+	text-align:justify;
+}
 .fa-brands{
 	background:white;
 	color:blue;
 	font-size:18px;
-}
-p{
-	text-align:none;
 }
 .copyright {
 	position: fixed;
@@ -399,6 +398,13 @@ p{
 }
 .copyright p{
 	text-align:center;
+}
+#msg{
+	color:red;
+	margin-top:15px;
+	display:block;
+	font-size:25px;
+	background:white;
 }
 
 /* ---------- for menu close and display------ */
@@ -480,6 +486,4 @@ nav .fas {
 		margin: 10px;
 	}
 
-
 }
-
