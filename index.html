@@ -217,5 +217,40 @@
 	<script>
     document.getElementById("year").textContent = new Date().getFullYear();
 </script>
+
+	
+ <script>
+      const scriptURL =                       
+     https://script.google.com/macros/s/AKfycbzzHOWfQ4ArJqq0eE7l8Kya9lqYqyw_jCYazop5b1mLdNGPZRxAITRl3GQQ9EJOLg8h/exec;
+      const form = document.forms["submit-to-google-sheet"];
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        var formData = new FormData(form);
+        var ex = document.getElementById("ex").checked;
+        var age = document.getElementById("age").checked;
+
+        if (age) {
+          formData.append("age", "Yes");
+        } else {
+          formData.append("age", "No");
+        }
+        if (ex) {
+          formData.append("ex", "Yes");
+        } else {
+          formData.append("ex", "No");
+        }
+
+        fetch(scriptURL, { method: "POST", body: formData })
+          .then((response) => {
+            swal("Done", "Submitted Successfully.", "success");
+          })
+          .catch((error) => {
+            swal("Error", "Something went wrong. please try again!", "error");
+          });
+      });
+    </script>
+
+	
 </body>
+
 </html>
